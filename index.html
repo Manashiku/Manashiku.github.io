@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ^^ thank you min for this :prayge: ^^ -->
+    <link rel="stylesheet" href="style.css">
+    <script src="eval.js"></script>
+    <title> Genshin Impact Stat Calculator</title>
+</head>
+
+<body>
+
+    <!----------------------------------------->
+    <h1>
+        Genshin Impact Character Stat Calculator
+    </h1>
+    <!----------------------------------------->
+    <!----------------------------------------->
+    <hr class="border">
+    </hr>
+    <!----------------------------------------->
+    <p>
+        <!-- You can select a character to autofill the base stats or enter them in yourself -->
+    <div class="chr">
+        <div class="selchr">
+            <select name="chrsel" id="chrsel" onchange="if(this.selectedIndex) change_base()">
+                <!----------------------------------------->
+                <option disabled selected>Character</option>
+                <!----------------------------------------->
+                <option value="albedo">Albedo</option>
+                <option value="aloy">Aloy</option>
+                <option value="amber">Amber</option>
+                <option value="itto">Arataki Itto</option>
+                <option value="barbara">Barbara</option>
+                <option value="beidou">Beidou</option>
+                <option value="bennett">Bennett</option>
+                <option value="chongyun">Chongyun</option>
+                <option value="cringe">Diluc</option>
+                <option value="diona">Diona</option>
+                <option value="eula">Eula</option>
+                <option value="fischl">Fischl</option>
+                <option value="ganyu">Ganyu</option>
+                <option value="gorou">Gorou</option>
+                <option value="hutao">Hutao</option>
+                <option value="jean">Jean</option>
+                <option value="kazuha">Kaedehara Kazuha</option>
+                <option value="kaeya">Kaeya</option>
+                <option value="ayaka">Kamisato Ayaka</option>
+                <option value="ayato">Kamisato Ayato</option>
+                <option value="keqing">Keqing</option>
+                <option value="klee">Klee</option>
+                <option value="kuki">Kuki Shinobu</option>
+                <option value="sara">Kujou Sara</option>
+                <option value="lisa">Lisa</option>
+                <option value="mona">Mona</option>
+                <option value="ning">Ningguang</option>
+                <option value="noelle">Noelle</option>
+                <option value="qiqi">Qiqi</option>
+                <option value="raiden">Raiden Shogun</option>
+                <option value="razor">Razor</option>
+                <option value="rosaria">Rosaria</option>
+                <option value="kokomi">Sangonomiya Kokomi</option>
+                <option value="sayu">Sayu</option>
+                <option value="shenhe">Shenhe</option>
+                <option value="heizou">Shikanoin Heizou</option>
+                <option value="sucrose">Sucrose</option>
+                <option value="child">Tartaglia</option>
+                <option value="traveler">Traveler</option>
+                <option value="venti">Venti</option>
+                <option value="xiangling">Xiangling</option>
+                <option value="xiao">Xiao</option>
+                <option value="xingqiu">Xingqiu</option>
+                <option value="xinyan">Xinyan</option>
+                <option value="yae">Yae Miko</option>
+                <option value="yanfei">Yanfei</option>
+                <option value="yelan">Yelan</option>
+                <option value="yoimiya">Yoimiya</option>
+                <option value="yunjin">Yun Jin</option>
+                <option value="zhongli">Zhongli</option>
+                <!-- <option value=""></option>
+            <option value=""></option>
+            <option value=""></option> -->
+            </select>
+        </div>
+        <div class="calcbutton">
+            <button class="button" type="button" onclick="calc_stats()">Caclulate</button>
+        </div>
+    </div>
+    </p>
+
+    <div class="chrimg" id="chrimg">
+        <div class="stats">
+            <div class="hpatkdef">
+                <div class="hp">
+                    <p>HP</p>
+                    <hr class="border">
+                    </hr>
+                    <p>
+
+                        <label for="basehp">base hp:</label><br>
+                        <input id="basehp" type="text" name="basehp" value="0">
+                        <br>
+                        <label for="hppc">total %:</label><br>
+                        <input id="hppc" type="text" name="hppc" value="0">
+                        <br>
+                        <label for="hpflat">total flat:</label><br>
+                        <input id="hpflat" type="text" name="hpflat" value="0">
+
+
+                    <p id="hp_result">0</p>
+                    </p>
+                </div>
+
+                <div class="atk">
+                    <p>ATK</p>
+                    <hr class="border">
+                    </hr>
+                    <p>
+
+                        <label for="chrbase">character base:</label><br>
+                        <input id="chrbase" type="text" name="chrbase" value="0">
+                        <br>
+                        <label for="wpnbase">weapon base:</label><br>
+                        <input id="wpnbase" type="text" name="wpnbase" value="0">
+                        <br>
+                        <label for="atkpc">total %:</label><br>
+                        <input id="atkpc" type="text" name="atkpc" value="0">
+                        <br>
+                        <label for="atkflat">total flat :</label><br>
+                        <input id="atkflat" type="text" name="atkflat" value="0">
+
+
+                    <p id="atk_result">0</p>
+                    </p>
+                </div>
+
+                <div class="def">
+                    <p>DEF</p>
+                    <hr class="border">
+                    </hr>
+                    <p>
+
+                        <label for="basedef">base def:</label><br>
+                        <input id="basedef" type="text" name="basedef" value="0">
+                        <br>
+                        <label for="defpc">total %:</label><br>
+                        <input id="defpc" type="text" name="defpc" value="0">
+                        <br>
+                        <label for="defflat">total flat:</label><br>
+                        <input id="defflat" type="text" name="defflat" value="0">
+                        <br>
+
+                    <p id="def_result">0</p>
+                    </p>
+                </div>
+
+            </div>
+            <div class="dmgrate">
+                <div class="rate">
+                    <p>CRIT RATE</p>
+                    <hr class="border">
+                    </hr>
+                    <p>
+
+                        <label for="baserate">base crit rate:</label><br>
+                        <input id="baserate" type="text" name="baserate" value="0">
+                        <br>
+                        <label for="ratepc">total %:</label><br>
+                        <input id="ratepc" type="text" name="ratepc" value="0">
+                        <br>
+
+                    <p id="rate_result">0%</p>
+                    </p>
+                </div>
+
+                <div class="cdmg">
+                    <p>CRIT DMG</p>
+                    <hr class="border">
+                    </hr>
+                    <p>
+
+                        <label for="basecdmg">base crit dmg:</label><br>
+                        <input id="basecdmg" type="text" name="basecdmg" value="0">
+                        <br>
+                        <label for="cdmgpc">total %:</label><br>
+                        <input id="cdmgpc" type="text" name="cdmgpc" value="0">
+                        <br>
+
+                    <p id="cdmg_result">0%</p>
+                    </p>
+                </div>
+            </div>
+            <div class="emer">
+
+                <div class="em">
+                    <p>EM</p>
+                    <hr class="border">
+                    </hr>
+                    <p>
+
+                        <label for="baseem">base em:</label><br>
+                        <input id="baseem" type="text" name="baseem" value="0">
+                        <br>
+                        <label for="empc">total extra:</label><br>
+                        <input id="empc" type="text" name="empc" value="0">
+                        <br>
+
+                    <p id="em_result">0</p>
+                    </p>
+                </div>
+
+                <div class="er">
+                    <p>ER</p>
+                    <hr class="border">
+                    </hr>
+                    <p>
+
+                        <label for="baseer">base er:</label><br>
+                        <input id="baseer" type="text" name="baseer" value="0">
+                        <br>
+                        <label for="erpc">total extra:</label><br>
+                        <input id="erpc" type="text" name="erpc" value="0">
+                        <br>
+
+                    <p id="er_result">0%</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <img class="chrimg" id="chrimg" src="https://i.imgur.com/0aFnN3i.png" alt="chrimg"> -->
+
+
+</body>
+
+
+</html>

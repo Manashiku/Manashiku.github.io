@@ -1,0 +1,200 @@
+body
+{
+    background-color: rgb(31, 31, 31);
+    
+    padding-left: 10%;
+    padding-right: 10%;
+    background-repeat: no-repeat;
+}
+
+hr.border
+{
+    border-top: 10%;
+    border-radius: 5px;
+}
+
+h1
+{
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+p
+{
+
+    color: whitesmoke; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+}
+
+h3
+{
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+/*========================================*/
+
+
+div.chrimg
+{
+    z-index: 0;
+    margin-bottom: 50px;
+    background-image: linear-gradient(rgba(31, 31, 31,0.5), rgba(31, 31, 31,0.5)), url('https://i.imgur.com/0aFnN3i.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: scale-down;
+}
+
+/*========================================*/
+label
+{
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input
+{
+    display: inline;
+    background-color: rgb(83, 83, 83);
+    color: whitesmoke;
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+    text-align: center;
+}
+
+select
+{
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    
+    background-color: rgb(83, 83, 83);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.button
+{
+    text-align: center;
+    background-color: rgb(83, 83, 83);
+    color: whitesmoke;
+    border-radius: 5px;
+    border: none;
+}
+
+/*========================================*/
+
+
+div.stats
+{
+    
+    position: relative;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.hpatkdef
+{
+    
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.dmgrate
+{
+   
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.emer
+{
+    
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*========================================*/
+div.chr 
+{
+    text-align: center;
+      
+    font-family: 'Courier New', Courier, monospace;
+}
+div.selchr
+{
+    display: block;
+    display: inline-block;
+
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.calcbutton
+{
+    display: block;
+    display: inline-block;
+
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.hp
+{
+    display: block;
+    display: inline-block;
+
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.atk 
+{
+    display: block;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.def 
+{
+    display: block;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.rate 
+{
+    display: block;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.cdmg 
+{
+    display: block;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.em 
+{
+    display: block;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+div.er 
+{
+    display: block;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
