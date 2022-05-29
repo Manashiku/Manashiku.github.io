@@ -1,0 +1,38 @@
+body
+{
+    background-color: rgb(31, 31, 31);
+    padding-left: 10%;
+    padding-right: 10%;
+    background-repeat: no-repeat;
+}
+
+hr.border
+{
+    border-top: 10%;
+    border-radius: 5px;
+}
+
+h1
+{
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+p
+{
+
+    color: whitesmoke; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+}
+
+a:link
+{
+    color: whitesmoke;
+}
+a:visited
+{
+    color: rgb(145, 26, 26);
+}
